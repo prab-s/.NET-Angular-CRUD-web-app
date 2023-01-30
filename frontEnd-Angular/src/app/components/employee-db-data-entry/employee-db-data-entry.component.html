@@ -1,0 +1,50 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new data</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form class="modal-content" #form="ngForm" (ngSubmit)="addNewEmployeeDetails()">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new employee's details</h1>
+                <button type="button" id="closeButtonDataEntryModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text">Firstname</span>
+                    <input type="text" class="form-control" id="Firstname" [(ngModel)]="addEmployeeRequest.firstname" name="firstname">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Surname</span>
+                    <input type="text" class="form-control" id="Surname" [(ngModel)]="addEmployeeRequest.surname" name="surname">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Date of birth</span>
+                    <input type="date" class="form-control" id="DOB" [(ngModel)]="addEmployeeRequest.dob" name="dob">
+                    <span class="input-group-text">Gender</span>
+                    <input type="text" class="form-control" id="Gender" [(ngModel)]="addEmployeeRequest.gender" name="gender">
+                </div>
+                <div class="input-group flex-nowrap mt-3">
+                    <span class="input-group-text">Role</span>
+                    <input type="text" class="form-control" id="Role" [(ngModel)]="addEmployeeRequest.role" name="role">
+                </div>
+                <div class="input-group flex-nowrap mt-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="email" class="form-control" id="Email" [(ngModel)]="addEmployeeRequest.email" name="email">
+                    <span class="input-group-text">Phone</span>
+                    <input type="tel" class="form-control" id="Phone" [(ngModel)]="addEmployeeRequest.phone" name="phone">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Department</span>
+                    <input type="text" class="form-control" id="Department" [(ngModel)]="addEmployeeRequest.department" name="department">
+                    <span class="input-group-text">Salary</span>
+                    <input type="number" class="form-control" id="Salary" [(ngModel)]="addEmployeeRequest.salary" name="salary">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

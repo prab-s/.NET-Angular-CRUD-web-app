@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-dark bg-opacity-50 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"><i class="fa fa-home fa-fw"></i>Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link"><i class="fa fa-book fa-fw"></i>About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-pencil fa-fw"></i>Data</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item"routerLink="/employee-details" routerLinkActive="active"><i class="fa fa-cog fa-fw"></i>Employee DB</a></li>
+              <li><a class="dropdown-item disabled" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/store" routerLinkActive="active"><i class="fa fa-home fa-fw"></i>Store</a>
+          </li>
+        </ul>
+        <!-- <div class="d-flex btn-group dropstart">
+            <button class="btn btn-ark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Theme</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" data-bs-theme-value="dark">Dark</a></li>
+                    <li><a class="dropdown-item" data-bs-theme-value="light">Light</a></li>
+                    <li><a class="dropdown-item" data-bs-theme-value="auto">Auto</a></li>
+                </ul>
+        </div> -->
+        <ul class="d-flex navbar-nav  mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Theme</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" data-bs-theme-value="dark">Dark</a></li>
+                <li><a class="dropdown-item" data-bs-theme-value="light">Light</a></li>
+                <li><a class="dropdown-item" data-bs-theme-value="auto">Auto</a></li>
+            </ul>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>

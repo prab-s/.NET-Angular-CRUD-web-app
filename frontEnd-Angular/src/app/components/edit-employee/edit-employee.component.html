@@ -1,0 +1,53 @@
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" [attr.data-bs-target]="'#targetmodal'+ editEmployeeRequest.id" (click)="onModalOpen()">Edit</button>
+
+<div class="modal fade" [attr.id]="'targetmodal'+ editEmployeeRequest.id" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit employee details</h1>
+                <button type="button" [attr.id]="'closeButtonEditModal' + editEmployeeRequest.id" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- <span class="text-secondary">{{editEmployeeRequest.id}}</span>
+            <span class="text-secondary">{{editEmployeeRequest.dob}}</span>
+            <span class="text-secondary">{{this.LocalDate | slice:0:10}}</span> -->
+            <div class="modal-body">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text">Firstname</span>
+                    <input type="text" class="form-control" id="Firstname" [(ngModel)]="editEmployeeRequest.firstname" name="firstname">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Surname</span>
+                    <input type="text" class="form-control" id="Surname" [(ngModel)]="editEmployeeRequest.surname" name="surname">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Date of birth</span>
+                    <input type="date" class="form-control" id="DOB" [(ngModel)]="this.LocalDate" name="dob">
+                    <span class="input-group-text">Gender</span>
+                    <input type="text" class="form-control" id="Gender" [(ngModel)]="editEmployeeRequest.gender" name="gender">
+                </div>
+                <div class="input-group flex-nowrap mt-3">
+                    <span class="input-group-text">Role</span>
+                    <input type="text" class="form-control" id="Role" [(ngModel)]="editEmployeeRequest.role" name="role">
+                </div>
+                <div class="input-group flex-nowrap mt-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="email" class="form-control" id="Email" [(ngModel)]="editEmployeeRequest.email" name="email">
+                    <span class="input-group-text">Phone</span>
+                    <input type="tel" class="form-control" id="Phone" [(ngModel)]="editEmployeeRequest.phone" name="phone">
+                </div>
+                <div class="input-group flex-nowrap mt-2">
+                    <span class="input-group-text">Department</span>
+                    <input type="text" class="form-control" id="Department" [(ngModel)]="editEmployeeRequest.department" name="department">
+                    <span class="input-group-text">Salary</span>
+                    <input type="number" class="form-control" id="Salary" [(ngModel)]="editEmployeeRequest.salary" name="salary">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="deleteEntry()" >Delete</button>
+                <span class="w-50"></span>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success" (click)="editEmployeeDetails()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

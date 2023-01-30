@@ -1,0 +1,6 @@
+.navbar-brand .dropdown-item .nav-link, .active {
+    /* border-bottom: 5px ridge #5bc0eb; */
+    /* background-color: #2d7d9a75; */
+    text-decoration: 2px underline solid rgba(255, 255, 255, 0.5);
+    font-weight: bolder;
+}
