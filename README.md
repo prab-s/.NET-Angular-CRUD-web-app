@@ -5,7 +5,6 @@ I deployed it using **Docker** in a micro-service architecture.
 
 ## Tech stack
 
-> PERN STACK
 + Front end: Angular
 + API backend: .NET
 + Server: Microsoft SQL Server
